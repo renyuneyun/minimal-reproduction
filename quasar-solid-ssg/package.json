@@ -1,0 +1,48 @@
+{
+  "name": "quasar-solid-ssg",
+  "version": "0.0.1",
+  "description": "A Quasar Project",
+  "productName": "Quasar App",
+  "author": "renyuneyun (Rui Zhao) <renyuneyun@gmail.com>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue ./",
+    "format": "prettier --write \"**/*.{js,ts,vue,css,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "build:ssg": "quasar ssg generate",
+    "dev:ssg": "quasar ssg dev",
+    "serve:ssg": "quasar ssg serve dist/ssg"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.4",
+    "@renyuneyun/solid-helper": "file:../../solid-helper",
+    "pinia": "^2.0.11",
+    "quasar": "^2.14.2",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.7.1",
+    "@quasar/vite-plugin": "^1.6.0",
+    "@types/node": "^20.10.5",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "autoprefixer": "^10.4.2",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "prettier": "^2.5.1",
+    "quasar-app-extension-ssg": "^5.1.1",
+    "typescript": "^4.5.4"
+  },
+  "overrides": {
+    "vite": "^4.0.0"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

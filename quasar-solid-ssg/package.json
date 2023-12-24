@@ -16,10 +16,11 @@
     "serve:ssg": "quasar ssg serve dist/ssg"
   },
   "dependencies": {
+    "@inrupt/solid-client-authn-browser": "^2.0.0",
     "@quasar/extras": "^1.16.4",
-    "@renyuneyun/solid-helper": "file:../../solid-helper",
     "pinia": "^2.0.11",
     "quasar": "^2.14.2",
+    "solid-helper-vue": "file:../../solid-helper-vue",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"
   },

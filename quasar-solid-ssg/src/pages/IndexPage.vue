@@ -7,8 +7,12 @@
 <script setup lang="ts">
 import { Todo, Meta } from 'components/models';
 import ExampleComponent from 'components/ExampleComponent.vue';
-import { onMounted, ref } from 'vue';
-import { UserInfoStruct, getUserInfo } from '@renyuneyun/solid-helper';
+import { ref } from 'vue';
+
+import { useSessionStore } from 'solid-helper-vue';  // Uncomment this line results in SSG build failure due to circular object (if missing dependency), or Pinia undefined
+// import { useSessionStore } from '../stores/session';  // Uncomment this line it works correctly. This store is the exact copy from the library.
+
+const sessionStore = useSessionStore();
 
 const todos = ref<Todo[]>([
   {
@@ -35,9 +39,4 @@ const todos = ref<Todo[]>([
 const meta = ref<Meta>({
   totalCount: 1200
 });
-
-onMounted(async () => {
-  const userInfo = await getUserInfo('https://renyuneyun.solidcommunity.net/profile/card#me');
-  console.log(userInfo);
-})
 </script>
